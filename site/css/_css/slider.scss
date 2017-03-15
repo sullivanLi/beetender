@@ -1,0 +1,212 @@
+.slider {
+  overflow: hidden;
+  position: relative;
+  li {
+    .backgroud {
+      width: 100%;
+    }
+    .board {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.6);
+      padding: 40px 20px;
+    }
+    .btn {
+      position: absolute;
+      bottom: -20px;
+      right: 30px;
+      opacity: 0;
+      transform: translate(0%, 200px);
+    }
+    list-style-type: none;
+    display: none;
+    &.active {
+      display: inline;
+      animation: fadeIn 0.5s ease-in-out;
+      .btn {
+        animation: sliderBtn 1s ease-in-out 1s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  #slider01 {
+    .board {
+      transform: translate(0%, -200%);
+    }
+    &.active .board {
+      animation: slider01 1s ease-in-out 100ms;
+      animation-fill-mode: forwards;
+    }
+  }
+  #slider02 {
+    .board {
+      transform: translate(50vw, -50%);
+    }
+    .btn {
+      right: -20px;
+    }
+    &.active .board {
+      animation: slider02 1s ease-in-out 100ms;
+      animation-fill-mode: forwards;
+    }
+  }
+  #slider03 {
+    .board {
+      transform: translate(50%, -200%);
+    }
+    .btn {
+      right: -20px;
+    }
+    &.active .board {
+      animation: slider03 1s ease-in-out 100ms;
+      animation-fill-mode: forwards;
+    }
+  }
+  #slider04 {
+    .board {
+      transform: translate(50vw, -50%);
+    }
+    .btn {
+      right: 50px;
+    }
+    &.active .board {
+      animation: slider04 1s ease-in-out 100ms;
+      animation-fill-mode: forwards;
+    }
+  }
+  #slider05 {
+    .board {
+      transform: translate(5%, -200%);
+    }
+    .btn {
+      right: 170px;
+    }
+    &.active .board {
+      animation: slider05 1s ease-in-out 100ms;
+      animation-fill-mode: forwards;
+    }
+  }
+  
+  .indicators {
+    position: relative;
+    top: -50px;
+  }
+  .indicator {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 5px;
+    cursor: pointer;
+    &.active {
+      background-color: yellow;
+      border: 2px solid white;
+    }
+  }
+  
+  @media screen and (max-width: 1100px) {
+    li .backgroud {
+      width: auto;
+      height: 500px;
+    }
+    #slider01, #slider02, #slider03, #slider04, #slider05 {
+      .board {
+        transform: translate(-50%, -60%);
+        width: 40%;
+        .text {
+          width: 100%;
+        }
+      }
+      .btn {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+      &.active .board, &.active .btn {
+        animation: none;
+      }
+    }
+    #slider02 .board {
+      width: 20%;
+    }
+    #slider04 {
+      .board {
+        width: 25%;
+      }
+      .btn {
+        right: 0;
+      }
+    }
+    #slider05 .btn {
+      right: 0;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    #slider01, #slider02, #slider03, #slider04, #slider05 {
+      .board {
+        width: 90%;
+      } 
+    }
+     #slider02 .board {
+      width: 50%;
+    }
+    #slider04 {
+      .board {
+        width: 60%;
+      }
+    }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  1% {
+    display: block;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+@keyframes slider01 {
+  100% {
+    transform: translate(0%, -50%);
+  }
+}
+@keyframes slider02 {
+  100% {
+    transform: translate(200px, -50%);
+  }
+}
+@keyframes slider03 {
+  100% {
+    transform: translate(50%, -50%);
+  }
+}
+@keyframes slider04 {
+  100% {
+    transform: translate(50%, -50%);
+  }
+}
+@keyframes slider05 {
+  100% {
+    transform: translate(5%, -50%);
+  }
+}
+@keyframes sliderBtn {
+  0% {
+    opacity: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

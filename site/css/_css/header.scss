@@ -1,0 +1,19 @@
+header {
+  height: 125px;
+  nav {
+    li {
+      list-style-type: none;
+      display: inline;
+      margin: 0 30px;
+      cursor: pointer; 
+    }
+    .logo {
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    nav li {
+      display: none;
+    }
+  }
+}

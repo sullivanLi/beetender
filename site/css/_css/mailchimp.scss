@@ -1,0 +1,68 @@
+.mailchimp {
+  margin: 50px 0 125px 0;
+  #mc_embed_signup {
+    border: 3px #b9a5a3 solid;
+    max-width: 1000px;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 19px;
+    font-weight: 600;
+    padding: 0 70px;
+    .title {
+      text-align: center;
+      font-size: 24px;
+      
+      margin: 70px 0 40px 0;
+    }
+    input {
+      border: none;
+      font-size: 18px;
+    }
+    input[type="text"], input[type="url"], input[type="email"] {
+      height: 55px;
+      width: 50%;
+      margin-left: 40px;
+    }
+    input[type="image"] {
+      position: relative;
+      left: 600px;
+      top: 35px;
+    }
+    label {
+      font-style: italic;
+      display: inline-block;
+      width: 300px;
+      height: 55px;
+      border-right: 1px #b9a5a3 solid;
+    }
+    .mc-field-group {
+      border-bottom: 1px #b9a5a3 solid;
+    }
+  }
+  @media screen and (max-width: 900px) {
+    #mc_embed_signup {
+      border: none;
+      padding: 0 10px;
+      input {
+        border: 1px #b9a5a3 solid;
+      }
+      label {
+        border: none;
+        display: block;
+        width: auto;
+        height: auto;
+      }
+      input[type="text"], input[type="url"], input[type="email"] {
+        width: 90%;
+        margin: 10px 10px;
+      }
+      .mc-field-group {
+        border: none;
+      }
+      input[type="image"] {
+        position: static;
+        border: none;
+      }
+    }
+  }
+}

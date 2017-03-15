@@ -1,0 +1,64 @@
+.feature {
+  margin: 80px 0;
+  .container {
+    max-width: 890px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    .title {
+      text-align: center;
+      font-size: 26px;
+      font-weight: 800;
+      margin-bottom: 50px;
+      flex-basis: 100%;
+    }
+    .block {
+      color: #2a2a2a;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 30px;
+      flex-basis: 45%;
+      padding: 25px 0;
+    }
+    .image {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    .reach, .analysis {
+      padding-right: 35px;
+      border-right: 3px #b9a5a3 solid;
+      .image {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .content {
+        text-align: right;
+      }
+    }
+    .delivery, .platform {
+      padding-left: 35px;
+    }
+    .reach, .delivery {
+      border-bottom: 3px #b9a5a3 solid;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .container {
+      .block {
+        flex-basis: 90%;
+      }
+      .reach, .analysis, .delivery, .platform {
+        border: none;
+        padding: 0;
+        margin: 20px 0;
+        text-align: center;
+        .content {
+          text-align: center;
+        }
+        .image {
+          display: block;
+        }
+      }
+    }
+  }
+}

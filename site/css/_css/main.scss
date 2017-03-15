@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,600,800");
+@import "header";
+@import "slider";
+@import "vision";
+@import "feature";
+@import "mailchimp";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.barrier {
+  max-width: 1200px;
+  width: 100%;
+}
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-space-around {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.text-color {
+  color: #532727;
+}
